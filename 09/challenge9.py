@@ -28,17 +28,15 @@ second="156,141,165,135,169,131,176,130,187,134,191,140,191,146,186,150,179,155,
 lfirst = [ int(i) for i in first.split(",")]
 lsecond = [ int(i) for i in second.split(",")]
 
+# using tkinker to draw lines is a lot easier than I thought ...
 from Tkinter import *
 
 canvas = Canvas(width=500, height=500, bg='white')  
 canvas.pack(expand=YES, fill=BOTH)                  
 
-            
 for i in range(2, len(lfirst), 2): 
     canvas.create_line(lfirst[i-2], lfirst[i-1], lfirst[i], lfirst[i+1])
 for i in range(2, len(lsecond), 2): 
     canvas.create_line(lsecond[i-2], lsecond[i-1], lsecond[i], lsecond[i+1])
 
 mainloop()
-           
-

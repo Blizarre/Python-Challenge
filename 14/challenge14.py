@@ -1,6 +1,6 @@
 # http://www.pythonchallenge.com/pc/return/italy.html
 
-from PIL import Image as im
+import Image as im
 from numpy import array, zeros
 
 wire = im.open("wire.png")
